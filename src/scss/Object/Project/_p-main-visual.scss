@@ -1,0 +1,47 @@
+/* ================================================================
+  メインビジュアル
+   ================================================================ */
+
+.p-main-visual {
+  position: relative;
+  height: 590px;
+  background: url(../img/fv-bgi_sp@2x.jpg) center / cover;
+
+  @include mq(pc) {
+    height: 740px;
+    margin: 0 auto;
+    background: url(../img/fv-bgi@2x.jpg) center bottom;
+  }
+
+  &__catch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: calc((300 / 375) * 100%);
+    height: 100px;
+    margin: auto;
+    border: solid 2px #fff;
+    transform: top -50% left -50%;
+
+    @include mq(pc) {
+      max-width: 449px;
+      height: 136px;
+    }
+
+    p {
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 100px;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 0.05em;
+
+      @include mq(pc) {
+        font-size: 5rem;
+        line-height: 136px;
+      }
+    }
+  }
+}

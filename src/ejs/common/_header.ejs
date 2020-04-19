@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>クリ★スタコーディング課題【初級編】</title>
+  <meta name="description" content="" />
+  <!-- 検索結果から除外する -->
+  <meta name="robots" content="none" />
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= path %>/img/favicon/apple-touch-icon.png" />
+  <link rel="icon" href="<%= path %>/img/favicon/favicon.ico" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="<%= path %>/css/style.css" />
+</head>
+
+<body>
+  <!-- ヘッダーここから -->
+  <header class="l-header">
+    <div class="p-header">
+      <div class="p-header__logo">
+        <a href="#">
+          <h1>クリ★スタ</h1>
+        </a>
+      </div>
+      <nav class="p-header__nav">
+        <ul class="p-header__list">
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#about">About</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#service">Service</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#news">News</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="p-header__menu">
+        <span class="p-header__menu-line"></span>
+        <span class="p-header__menu-line"></span>
+        <span class="p-header__menu-line"></span>
+      </button>
+    </div>
+  </header>
+  <!-- ヘッダーここまで -->

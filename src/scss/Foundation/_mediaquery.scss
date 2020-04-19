@@ -1,0 +1,16 @@
+/* ================================================================
+  メディアクエリ
+   ================================================================ */
+
+$pc: 768px;
+
+$breakpoints: (
+  "pc": "print,screen and (min-width:768px)",
+  //ブラウザ幅768px以上で適用
+);
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

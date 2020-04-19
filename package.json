@@ -1,0 +1,55 @@
+{
+  "name": "gulptest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint:css": "stylelint --fix ./src/scss/**/*.scss",
+    "lint:js": "eslint --fix ./public/js/*.js"
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "gulpfile.js"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.14.0",
+    "autoprefixer": "^9.7.5",
+    "browser-sync": "^2.26.7",
+    "connect-ssi": "^1.1.1",
+    "css-declaration-sorter": "^5.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-jquery": "^1.5.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-ejs": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "prettier": "^2.0.4",
+    "stylelint": "^13.3.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.16.0"
+  },
+  "dependencies": {
+    "gulp-html-beautify": "^1.0.1"
+  },
+  "description": ""
+}

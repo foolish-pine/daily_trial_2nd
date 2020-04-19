@@ -1,0 +1,29 @@
+/* ================================================================
+  ベース
+   ================================================================ */
+
+html {
+  font-size: 62.5%; // ルートのフォントサイズ = 10px
+}
+
+body {
+  @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Roboto:400,500,700&display=swap&subset=japanese"); // Google Fonts
+
+  display: flex; // フッター固定用
+  flex-direction: column; // フッター固定用
+  min-height: 100vh; // フッター固定用
+  font-family: "Roboto", "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 1.6rem; // ルートのフォントサイズ = 1.6em (16px)
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+button:focus {
+  outline: 0;
+}

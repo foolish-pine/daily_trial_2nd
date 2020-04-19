@@ -1,0 +1,29 @@
+/* ================================================================
+  newsコンテンツ
+   ================================================================ */
+
+.p-news {
+  padding-top: 106px;
+
+  &__inner {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: 0 auto;
+
+    @include mq(pc) {
+      max-width: $max-width-inner-pc;
+    }
+  }
+
+  &__container {
+    @include mq(pc) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__card {
+    margin: 0 auto 50px;
+  }
+}

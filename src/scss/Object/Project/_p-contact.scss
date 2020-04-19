@@ -1,0 +1,97 @@
+/* ================================================================
+  コンタクトフォーム
+   ================================================================ */
+
+.p-contact {
+  padding-top: 97px;
+
+  &__inner {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: 0 auto;
+
+    @include mq(pc) {
+      max-width: 700px;
+    }
+  }
+
+  &__section-title {
+    margin-bottom: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 0.1;
+  }
+
+  &__text--confirmation {
+    margin-bottom: 60px;
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  &__textbox {
+    width: 100%;
+    margin-bottom: 22px;
+    line-height: 1.8;
+    border: solid 1px $color-form-border;
+  }
+
+  form {
+    label {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    }
+  }
+
+  &__textbox--confirmation {
+    width: 100%;
+    margin-bottom: 22px;
+    line-height: 2;
+    background: $color-form-bg;
+    border: solid 1px $color-form-border;
+  }
+
+  &__textarea {
+    margin-bottom: 40px;
+
+    textarea {
+      width: 100%;
+      height: 171px;
+      line-height: 1.5;
+      resize: none;
+      border: solid 1px $color-form-border;
+    }
+  }
+
+  &__error-list {
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    font-size: 1.9rem;
+    color: #ff2e5a;
+    text-align: left;
+    border: 1px solid #ff2e5a;
+    border-radius: 5px;
+  }
+
+  &__textarea--confirmation {
+    width: 100%;
+    min-height: 171px;
+    margin-bottom: 27px;
+    line-height: 1.5;
+    background: $color-form-bg;
+    border: solid 1px $color-form-border;
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include mq(pc) {
+      flex-direction: row;
+    }
+  }
+
+  &__button {
+    margin: 0 auto 50px;
+  }
+}

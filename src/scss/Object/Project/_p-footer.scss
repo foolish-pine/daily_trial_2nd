@@ -1,0 +1,32 @@
+/* ================================================================
+  フッター
+   ================================================================ */
+
+.p-footer {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  background: $color-footer-bg;
+
+  @include mq(pc) {
+    height: 80px;
+  }
+
+  &__inner {
+    max-width: $max-width-inner-sp;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-weight: regular;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    @include mq(pc) {
+      line-height: 80px;
+    }
+  }
+}

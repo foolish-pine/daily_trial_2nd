@@ -1,0 +1,66 @@
+/* ================================================================
+  serviceコンテンツ
+   ================================================================ */
+
+.p-service {
+  padding-top: 160px;
+
+  &__inner {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: 0 auto;
+
+    @include mq(pc) {
+      max-width: $max-width-inner-pc;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @include mq(pc) {
+      margin-bottom: 28px;
+      white-space: nowrap;
+    }
+  }
+
+  &__text {
+    margin-bottom: 35px;
+  }
+
+  &__container {
+    margin-bottom: 40px;
+
+    @include mq(pc) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    &:nth-child(2) {
+      @include mq(pc) {
+        flex-flow: row-reverse;
+      }
+    }
+  }
+
+  &__text-container {
+    @include mq(pc) {
+      width: calc((480 / 1030) * 100%);
+      padding-top: 15px;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mq(pc) {
+      display: flex;
+      align-items: center;
+      width: calc((480 / 1030) * 100%);
+    }
+  }
+}
