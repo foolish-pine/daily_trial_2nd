@@ -1,0 +1,38 @@
+/* ================================================================
+  メインビジュアル
+   ================================================================ */
+
+.p-main-visual {
+  position: relative;
+  z-index: 10;
+  height: 667px;
+  padding-top: 138px;
+  background: url(../img/mv@2x.png) no-repeat center / cover;
+
+  &__inner {
+    width: $max-width-inner-sp;
+    margin: auto;
+  }
+
+  &__catch-main {
+    margin-bottom: 40px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: calc(45 / 24);
+    color: $color-text-section-title;
+    letter-spacing: 0.002em;
+  }
+
+  &__catch-sub {
+    margin-bottom: 40px;
+    font-size: 1.6rem;
+    line-height: calc(26 / 24);
+    color: $color-text-section-title;
+    letter-spacing: 0.04em;
+  }
+
+  &__contact-button {
+    width: 232px;
+    margin: auto;
+  }
+}

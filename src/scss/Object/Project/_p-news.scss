@@ -1,0 +1,69 @@
+/* ================================================================
+  newsコンテンツ
+   ================================================================ */
+
+.p-news {
+  &__inner {
+    padding-bottom: 60px;
+    background-color: #f3f3f3;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 20;
+    max-width: $max-width-inner-sp;
+    padding: 40px 0 60px;
+    margin: -40px auto 0;
+    background-color: #fff;
+    box-shadow: 0 5px 12px #3e3e3e33;
+  }
+
+  &__section-title {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #cecdcd;
+  }
+
+  &__content {
+    padding: 13px 16px 16px;
+    border-bottom: 1px solid #cecdcd;
+  }
+
+  &__content-time-icon {
+    margin-bottom: 10px;
+    line-height: 24px;
+
+    time {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.036em;
+    }
+  }
+
+  &__content-icon-1 {
+    display: inline-block;
+    width: 89px;
+    height: 24px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border: 2px solid #3b69ff;
+    border-radius: 50px;
+  }
+
+  &__button {
+    margin: 60px auto 0;
+    border: 1px solid $color-button-default;
+
+    a {
+      color: $color-text;
+
+      &:hover {
+        @include mq(pc) {
+          color: #fff;
+          background-color: $color-text;
+        }
+      }
+    }
+  }
+}

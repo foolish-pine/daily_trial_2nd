@@ -1,0 +1,38 @@
+/* ================================================================
+  commentsコンテンツ
+   ================================================================ */
+
+.p-comments {
+  &__inner {
+    height: 550px;
+    background-color: $color-comments-bg;
+  }
+
+  &__container {
+    position: relative;
+    max-width: $max-width-inner-sp;
+    padding: 40px 0;
+    margin: auto;
+    margin-top: -50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #00000029;
+  }
+
+  &__section-title {
+    width: 100%;
+    max-width: calc(303 / 343 * 100%);
+    margin: 0 auto 40px;
+    text-align: left;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    max-width: calc(303 / 343 * 100%);
+    margin: 0 auto 30px;
+  }
+
+  &__content-text {
+    margin-left: 24px;
+  }
+}

@@ -1,0 +1,32 @@
+/* ================================================================
+  resultsコンテンツ
+   ================================================================ */
+
+.p-results {
+  &__inner {
+    padding: 40px 0;
+    background-color: $color-results-bg;
+  }
+
+  &__section-title {
+    color: #fff;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: auto;
+    border: 1px solid $color-button-default;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        @include mq(pc) {
+          color: #fff;
+          background-color: $color-text;
+        }
+      }
+    }
+  }
+}

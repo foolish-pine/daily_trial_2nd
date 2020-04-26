@@ -1,0 +1,77 @@
+/* ================================================================
+  QandAコンテンツ
+   ================================================================ */
+
+.p-qanda {
+  padding: 40px 0;
+  background: url(../img/sunyu-kim-1053375-unsplash@2x.png) no-repeat center /
+    cover;
+
+  &__container {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    padding: 22px 18px;
+    margin: 0 auto 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 7px;
+  }
+
+  &__section-title {
+    margin: 0 auto 40px;
+  }
+
+  &__content-question-container {
+    position: relative;
+  }
+
+  &__content-question-mark {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+    background-color: #3b69ff;
+    border-radius: 50px;
+  }
+
+  &__content-question-text {
+    display: inline-block;
+    margin-left: 13px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  &__content-question-toggle-line {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 15px;
+    height: 3px;
+    background: #3b69ff;
+
+    &:last-child {
+      top: 4px;
+      right: 6px;
+      width: 3px;
+      height: 15px;
+    }
+  }
+
+  &__content-answer-text {
+    display: none;
+    padding: 18px 14px;
+    margin-top: 19px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: calc(26 / 16);
+    background-color: #3b69ff33;
+    border-radius: 7px;
+  }
+}
