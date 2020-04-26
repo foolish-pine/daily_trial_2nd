@@ -4,13 +4,10 @@
 
 .p-price {
   position: relative;
+  padding: 40px 0 150px;
+  background-color: $color-price-bg;
 
-  &__inner {
-    padding: 40px 0 150px;
-    background-color: $color-price-bg;
-  }
-
-  &__setion-title {
+  &__section-title {
     margin-bottom: 40px;
   }
 

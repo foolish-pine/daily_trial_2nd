@@ -3,19 +3,48 @@
    ================================================================ */
 
 .p-results {
-  &__inner {
-    padding: 40px 0;
-    background-color: $color-results-bg;
-  }
+  padding: 40px 0;
+  background-color: $color-results-bg;
 
   &__section-title {
+    margin-bottom: 40px;
     color: #fff;
   }
 
-  &__button {
+  &__inner {
     width: 100%;
     max-width: $max-width-inner-sp;
     margin: auto;
+  }
+
+  &__swiper-content {
+    margin-right: 24px;
+  }
+
+  &__swiper-text-container {
+    padding: 12px;
+    background: #fff;
+  }
+
+  &__swiper-title {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3e3e3e;
+    letter-spacing: 0.001em;
+  }
+
+  &__swiper-text {
+    font-size: 1.2rem;
+    line-height: calc(20 / 12);
+    color: #3e3e3e;
+    letter-spacing: 0.001em;
+  }
+
+  &__button {
+    width: 343px;
+    max-width: $max-width-inner-sp;
+    margin: 44px auto 0;
     border: 1px solid $color-button-default;
 
     a {
@@ -28,5 +57,18 @@
         }
       }
     }
+  }
+
+  // slickのCSS
+  .slick-list {
+    padding: 0 30% 0 0 !important;
+  }
+
+  .slick-track {
+    margin-bottom: 10px;
+  }
+
+  .slick-dots {
+    // padding: 18px 0;
   }
 }
