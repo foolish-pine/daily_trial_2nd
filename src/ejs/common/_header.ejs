@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>クリ★スタコーディング課題【初級編】</title>
+  <title>デイトラ2ndコーディング課題</title>
   <meta name="description" content="" />
   <!-- 検索結果から除外する -->
   <meta name="robots" content="none" />
@@ -21,22 +21,25 @@
     <div class="p-header">
       <div class="p-header__logo">
         <a href="#">
-          <h1>クリ★スタ</h1>
+          <h1>
+            <img src="<%= path %>/img/logo@2x.png" alt="HANIWAMAN Corp.">
+          </h1>
         </a>
       </div>
+      <button class="p-header__menu">
+        <img src="<%= path %>/img/svg/hamburger.svg" alt="">
+      </button>
       <nav class="p-header__nav">
         <ul class="p-header__list">
-          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#about">About</a></li>
-          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#service">Service</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#news">News</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#service">Service</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#results">Results</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#faqs">FAQs</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#price">Price</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#comments">Comments</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="p-header__menu">
-        <span class="p-header__menu-line"></span>
-        <span class="p-header__menu-line"></span>
-        <span class="p-header__menu-line"></span>
-      </button>
     </div>
   </header>
   <!-- ヘッダーここまで -->

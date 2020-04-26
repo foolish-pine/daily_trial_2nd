@@ -3,63 +3,35 @@
    ================================================================ */
 
 .p-contact {
-  padding-top: 97px;
+  padding: 40px 0;
+  background: url(../img/alex-blajan-159378-unsplash@2x.png) no-repeat center /
+    cover;
 
-  &__inner {
+  &__container {
     width: 100%;
     max-width: $max-width-inner-sp;
-    margin: 0 auto;
-
-    @include mq(pc) {
-      max-width: 700px;
-    }
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
   }
 
   &__section-title {
-    margin-bottom: 60px;
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 2;
-    letter-spacing: 0.1;
+    margin-bottom: 10px;
+    color: #fff;
   }
 
-  &__text--confirmation {
-    margin-bottom: 60px;
-    font-size: 1.9rem;
-    text-align: center;
+  &__text {
+    font-size: 1.4rem;
+    line-height: calc(26 / 14);
+    color: #fff;
   }
 
-  &__textbox {
-    width: 100%;
-    margin-bottom: 22px;
-    line-height: 1.8;
-    border: solid 1px $color-form-border;
-  }
-
-  form {
-    label {
-      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-    }
-  }
-
-  &__textbox--confirmation {
-    width: 100%;
-    margin-bottom: 22px;
-    line-height: 2;
-    background: $color-form-bg;
-    border: solid 1px $color-form-border;
-  }
-
-  &__textarea {
-    margin-bottom: 40px;
-
-    textarea {
-      width: 100%;
-      height: 171px;
-      line-height: 1.5;
-      resize: none;
-      border: solid 1px $color-form-border;
-    }
+  &__text-container {
+    padding: 32px 16px 36px;
+    background: url(../img/contact1@2x.png) no-repeat padding-box center;
+    background-color: red;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 3px 6px #00000029;
   }
 
   &__error-list {
@@ -72,26 +44,92 @@
     border-radius: 5px;
   }
 
-  &__textarea--confirmation {
+  &__inner {
     width: 100%;
-    min-height: 171px;
-    margin-bottom: 27px;
-    line-height: 1.5;
-    background: $color-form-bg;
-    border: solid 1px $color-form-border;
+    max-width: calc(311 / 343 * 100%);
+    padding: 40px 0;
+    margin: auto;
   }
 
-  &__button-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: $color-text;
+    letter-spacing: 0;
+  }
 
-    @include mq(pc) {
-      flex-direction: row;
+  &__select-container {
+    select {
+      width: 100%;
+      border: 1px solid $color-form-border;
+      outline: none;
     }
   }
 
+  &__label-required {
+    display: inline-block;
+    width: 50px;
+    height: 22px;
+    margin-left: 20px;
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    background: #ff4646;
+    border-radius: 5px;
+  }
+
+  &__request {
+    margin-bottom: 40px;
+  }
+
+  &__textbox {
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $color-form-border;
+    outline: none;
+  }
+
+  &__sex {
+    margin-bottom: 40px;
+  }
+
+  &__radio-button-container {
+    display: block;
+  }
+
+  &__radio-label:last-child {
+    margin-left: 95px;
+  }
+
+  &__message {
+    margin-bottom: 20px;
+
+    textarea {
+      display: block;
+      width: 100%;
+      height: 160px;
+      resize: none;
+      border: 1px solid $color-form-border;
+      outline: none;
+    }
+  }
+
+  &__agree {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
   &__button {
-    margin: 0 auto 50px;
+    width: 121px;
+    margin: auto;
+
+    input {
+      width: 100%;
+    }
   }
 }

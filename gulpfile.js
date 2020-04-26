@@ -56,7 +56,7 @@ gulp.task("ejsbeautify", function (done) {
 gulp.task("browser-sync", function (done) {
   browserSync.init({
     //ローカル開発
-      proxy: "http://localhost:8888/~local_test/cresta_beginner/public",
+      proxy: "http://localhost:8888/~local_test/daily_trial_2nd/public",
     },
   done());
 });

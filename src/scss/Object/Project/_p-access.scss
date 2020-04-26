@@ -1,0 +1,54 @@
+/* ================================================================
+  accessコンテンツ
+   ================================================================ */
+
+.p-access {
+  background-color: $color-results-bg;
+
+  &__inner {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    padding: 40px 0;
+    margin: auto;
+  }
+
+  &__section-title {
+    margin-bottom: 40px;
+    color: #fff;
+    text-align: left;
+  }
+
+  &__address {
+    margin-bottom: 19px;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #fff;
+  }
+
+  &__google-map {
+    margin-bottom: 40px;
+
+    iframe {
+      width: 100%;
+      height: 241px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: auto;
+    border: 1px solid $color-button-default;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        @include mq(pc) {
+          color: #fff;
+          background-color: $color-text;
+        }
+      }
+    }
+  }
+}

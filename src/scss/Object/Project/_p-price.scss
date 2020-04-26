@@ -1,0 +1,56 @@
+/* ================================================================
+  priceコンテンツ
+   ================================================================ */
+
+.p-price {
+  position: relative;
+
+  &__inner {
+    padding: 40px 0 150px;
+    background-color: $color-price-bg;
+  }
+
+  &__setion-title {
+    margin-bottom: 40px;
+  }
+
+  &__table {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: 0 auto 14px;
+    border-collapse: collapse;
+    border: 1px solid #707070;
+  }
+
+  &__table-row {
+    max-width: $max-width-inner-sp;
+    height: 60.5px;
+    border-bottom: 1px solid #707070;
+  }
+
+  &__table-header {
+    width: calc(103 / 343 * 100%);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3e3e3e;
+  }
+
+  &__table-data {
+    width: calc(240 / 343 * 100%);
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3e3e3e;
+    background-color: #fff;
+  }
+
+  &__notice {
+    display: block;
+    max-width: $max-width-inner-sp;
+    margin: auto;
+    font-size: 1.2rem;
+    color: $color-text;
+  }
+}

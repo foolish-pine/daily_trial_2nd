@@ -3,64 +3,57 @@
    ================================================================ */
 
 .p-service {
-  padding-top: 160px;
+  height: 928px;
+  background-color: #f3f3f3;
 
   &__inner {
-    width: 100%;
-    max-width: $max-width-inner-sp;
-    margin: 0 auto;
-
-    @include mq(pc) {
-      max-width: $max-width-inner-pc;
-    }
+    height: 480px;
+    padding: 40px 0;
+    background-color: $color-service-bg;
   }
 
-  &__subtitle {
-    margin-bottom: 20px;
-
-    @include mq(pc) {
-      margin-bottom: 28px;
-      white-space: nowrap;
-    }
-  }
-
-  &__text {
-    margin-bottom: 35px;
+  &__section-title {
+    margin-bottom: 40px;
+    color: #fff;
   }
 
   &__container {
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    padding: 40px 16px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 5px 12px #3e3e3e33;
+  }
 
-    @include mq(pc) {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 25px;
-    }
+  &__content {
+    margin-bottom: 60px;
 
-    &:nth-child(2) {
-      @include mq(pc) {
-        flex-flow: row-reverse;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  &__text-container {
-    @include mq(pc) {
-      width: calc((480 / 1030) * 100%);
-      padding-top: 15px;
-    }
+  &__content-image {
+    margin-bottom: 28px;
+    text-align: center;
   }
 
-  &__image {
-    img {
-      width: 100%;
-      height: auto;
-    }
+  &__content-title {
+    margin-bottom: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: calc(24 / 18);
+    color: #3e3e3e;
+    text-align: center;
+    letter-spacing: 0.036em;
+  }
 
-    @include mq(pc) {
-      display: flex;
-      align-items: center;
-      width: calc((480 / 1030) * 100%);
-    }
+  &__content-text {
+    line-height: calc(24 / 14);
+    letter-spacing: 0.001;
   }
 }
