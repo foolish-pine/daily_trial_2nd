@@ -186,23 +186,13 @@ $(function () {
   });
 
   // ---------------------------------------------
-  // キャッチコピーフェードイン
+  // slickスライダー
   // ---------------------------------------------
 
-  $(".js-fadein-catch-sub, .js-fadein-catch-main").css({
-    opacity: 0,
-  });
-
-  $(window).on("load", function () {
-    $(".js-fadein-catch-sub").css({
-      opacity: 1,
-      transition: "opacity 2500ms",
-    });
-    setTimeout(function () {
-      $(".js-fadein-catch-main").css({
-        opacity: 1,
-        transition: "opacity 2500ms",
-      });
-    }, 2000);
+  $(".p-results__swiper-container").slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    arrows: false,
   });
 });

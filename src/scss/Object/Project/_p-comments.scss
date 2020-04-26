@@ -3,10 +3,8 @@
    ================================================================ */
 
 .p-comments {
-  &__inner {
-    height: 550px;
-    background-color: $color-comments-bg;
-  }
+  height: 550px;
+  background-color: $color-comments-bg;
 
   &__container {
     position: relative;

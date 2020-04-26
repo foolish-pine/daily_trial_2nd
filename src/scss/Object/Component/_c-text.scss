@@ -15,18 +15,4 @@
     text-align: center;
     letter-spacing: 0;
   }
-
-  &__section-subtitle {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 2;
-    color: $color-text-section-subtitle;
-    letter-spacing: 0.1em;
-
-    @include mq(pc) {
-      margin-bottom: 30px;
-      font-size: 2.4rem;
-    }
-  }
 }

@@ -6,11 +6,12 @@
   position: relative;
   z-index: 10;
   height: 667px;
-  padding-top: 138px;
-  background: url(../img/mv@2x.png) no-repeat center / cover;
+  padding-top: 206px;
+  background: url(../img/mv@2x.png) no-repeat left / cover;
 
   &__inner {
-    width: $max-width-inner-sp;
+    width: 100%;
+    max-width: $max-width-inner-sp;
     margin: auto;
   }
 

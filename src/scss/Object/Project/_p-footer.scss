@@ -23,6 +23,10 @@
     justify-content: space-between;
     width: calc(206 / 375 * 100%);
     margin: 0 auto 42px;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .fab {
@@ -52,9 +56,11 @@
   }
 
   &__logo {
+    display: block;
     font-size: 3.4rem;
     color: #e3e3e3;
     text-align: center;
+    text-decoration: none;
     letter-spacing: 0;
   }
 
