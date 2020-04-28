@@ -46,8 +46,8 @@
     letter-spacing: 0.36em;
     transition: 0.4s;
 
-    &:hover {
-      @include mq(pc) {
+    @include mq(pc) {
+      &:hover {
         transition: 0.4s;
       }
     }

@@ -29,7 +29,6 @@
   &__text-container {
     padding: 32px 16px 36px;
     background: url(../img/contact1@2x.png) no-repeat padding-box center;
-    background-color: red;
     border-radius: 12px 12px 0 0;
     box-shadow: 0 3px 6px #00000029;
   }
@@ -60,6 +59,21 @@
   }
 
   &__select-container {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: "";
+      border-top: 3px solid #3e3e3e;
+      border-right: 3px solid #3e3e3e;
+      transform: rotate(135deg);
+    }
+
     select {
       width: 100%;
       border: 1px solid $color-form-border;
