@@ -7,6 +7,16 @@
   background: url(../img/sunyu-kim-1053375-unsplash@2x.png) no-repeat center /
     cover;
 
+  @include mq(pc) {
+    padding: 80px 0;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+  }
+
   &__container {
     width: 100%;
     max-width: $max-width-inner-sp;
@@ -15,10 +25,19 @@
     cursor: pointer;
     background-color: #fff;
     border-radius: 7px;
+
+    @include mq(pc) {
+      max-width: 616px;
+      margin: 0 0 40px auto;
+    }
   }
 
   &__section-title {
     margin: 0 auto 40px;
+
+    @include mq(pc) {
+      margin: 0 auto 80px;
+    }
   }
 
   &__content-question-container {
@@ -48,19 +67,24 @@
     letter-spacing: 0.04em;
   }
 
-  &__content-question-toggle-line {
+  &__content-question-cross-line {
     position: absolute;
     top: 10px;
     right: 0;
     width: 15px;
     height: 3px;
     background: #3b69ff;
+    transition: transform 0.3s;
 
-    &:last-child {
+    &:nth-child(2) {
       top: 4px;
       right: 6px;
       width: 3px;
       height: 15px;
+
+      &.active {
+        transform: rotate(90deg);
+      }
     }
   }
 

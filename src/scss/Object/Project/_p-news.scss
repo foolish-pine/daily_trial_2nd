@@ -6,6 +6,10 @@
   padding-bottom: 60px;
   background-color: #f3f3f3;
 
+  @include mq(pc) {
+    padding: 130px 0;
+  }
+
   &__container {
     position: relative;
     z-index: 20;
@@ -14,17 +18,35 @@
     margin: -40px auto 0;
     background-color: #fff;
     box-shadow: 0 5px 12px #3e3e3e33;
+
+    @include mq(pc) {
+      max-width: 1180px;
+      padding: 60px 50px 40px;
+      margin: 0 auto;
+    }
   }
 
   &__section-title {
-    padding-bottom: 40px;
-    border-bottom: 1px solid #cecdcd;
+    margin-bottom: 40px;
+
+    @include mq(pc) {
+      margin-bottom: 60px;
+    }
   }
 
   &__content {
     position: relative;
     padding: 13px 47px 16px 16px;
-    border-bottom: 1px solid #cecdcd;
+    border-top: 1px solid #cecdcd;
+
+    &:last-child {
+      border-bottom: 1px solid #cecdcd;
+    }
+
+    @include mq(pc) {
+      display: flex;
+      padding: 40px 0 40px 10px;
+    }
 
     &::after {
       position: absolute;
@@ -45,8 +67,13 @@
   }
 
   &__content-time-icon {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
-    line-height: 24px;
+
+    @include mq(pc) {
+      margin-bottom: 0;
+    }
 
     time {
       font-family: "Montserrat", sans-serif;
@@ -65,23 +92,37 @@
     letter-spacing: 0.03em;
     border: 2px solid #3b69ff;
     border-radius: 50px;
+
+    @include mq(pc) {
+      margin-left: 60px;
+    }
   }
 
   &__content-text {
     font-weight: 500;
     letter-spacing: -0.035rem;
+
+    @include mq(pc) {
+      max-width: 697px;
+      margin-left: 60px;
+    }
   }
 
   &__button {
-    width: 311px;
     margin: 40px auto 0;
     border: 1px solid $color-button-default;
+
+    @include mq(pc) {
+      width: 248px;
+      height: 64px;
+    }
 
     a {
       color: $color-text;
 
-      &:hover {
-        @include mq(pc) {
+      @include mq(pc) {
+        line-height: 64px;
+        &:hover {
           color: #fff;
           background-color: $color-text;
         }

@@ -65,17 +65,21 @@ function spaceTrim ($str) {
           </h1>
         </a>
       </div>
-      <button class="p-header__menu">
+      <button class="p-header__hamburger-menu js-hamburger-menu">
         <img src="./img/svg/hamburger.svg" alt="">
       </button>
-      <nav class="p-header__nav">
+      <span class="p-header__nav-filter js-nav-filter"></span>
+      <nav class="p-header__nav js-header-nav">
+        <button class="p-header__close-button js-header-close-button">
+          <img src="./img/svg/batsu.svg" alt="">
+        </button>
         <ul class="p-header__list">
           <li class="p-header__item"><a class="js-smoothscroll" href="#news">News</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="#service">Service</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="#results">Results</a></li>
-          <li class="p-header__item"><a class="js-smoothscroll" href="#faqs">FAQs</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="#price">Price</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="#comments">Comments</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="#qanda">FAQs</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -135,7 +139,7 @@ function spaceTrim ($str) {
               </span>
             </div>
             <p class="p-news__content-text c-text">
-              ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース
+              ニュースニュースニュースニュースニュースニュース
             </p>
           </div>
         </a>
@@ -150,7 +154,7 @@ function spaceTrim ($str) {
               </span>
             </div>
             <p class="p-news__content-text c-text">
-              ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース
+              ニュースニュースニュースニュースニュースニュース
             </p>
           </div>
         </a>
@@ -211,10 +215,10 @@ function spaceTrim ($str) {
     <!-- serviceコンテンツここまで -->
     <!-- resultsコンテンツここから -->
     <div id="results" class="p-results">
-      <h2 class="p-results__section-title c-text__section-title">
-        Results
-      </h2>
       <div class="p-results__inner">
+        <h2 class="p-results__section-title c-text__section-title">
+          Results
+        </h2>
         <div class="p-results__swiper-container">
           <div class="p-results__swiper-content">
             <img src="img/slide1@2x.png" alt="">
@@ -283,187 +287,197 @@ function spaceTrim ($str) {
             </div>
           </div>
         </div>
-      </div>
-      <div class="p-results__button c-button--default">
-        <a href="#">
-          VIEW ALL
-        </a>
+        <div class="p-results__button c-button--default">
+          <a href="#">
+            VIEW ALL
+          </a>
+        </div>
       </div>
     </div>
     </div>
     <!-- resultsコンテンツここまで -->
     <!-- priceコンテンツここから -->
     <div id="price" class="p-price">
-      <h2 class="p-price__section-title c-text__section-title">
-        Price
-      </h2>
-      <table class="p-price__table">
-        <tbody>
-          <tr class="p-price__table-row">
-            <th class="p-price__table-header">
-              row1
-            </th>
-            <td class="p-price__table-data">
-              Price ￥10,000
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr class="p-price__table-row">
-            <th class="p-price__table-header">
-              row2
-            </th>
-            <td class="p-price__table-data">
-              Price ￥10,000
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr class="p-price__table-row">
-            <th class="p-price__table-header">
-              row3
-            </th>
-            <td class="p-price__table-data">
-              Price ￥10,000
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="p-price__notice">
-        ※ 上記料金はサンプルです。
-      </p>
+      <div class="p-price__inner">
+        <h2 class="p-price__section-title c-text__section-title">
+          Price
+        </h2>
+        <table class="p-price__table">
+          <tbody>
+            <tr class="p-price__table-row">
+              <th class="p-price__table-header">
+                row1
+              </th>
+              <td class="p-price__table-data">
+                Price ￥10,000
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="p-price__table-row">
+              <th class="p-price__table-header">
+                row2
+              </th>
+              <td class="p-price__table-data">
+                Price ￥10,000
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="p-price__table-row">
+              <th class="p-price__table-header">
+                row3
+              </th>
+              <td class="p-price__table-data">
+                Price ￥10,000
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="p-price__notice">
+          ※ 上記料金はサンプルです。
+        </p>
+      </div>
     </div>
     <!-- priceコンテンツここまで -->
     <!-- commentsコンテンツここから -->
     <div id="comments" class="p-comments">
-      <div class="p-comments__container">
-        <h2 class="p-comments__section-title c-text__section-title">
-          Comments
-        </h2>
-        <div class="p-comments__content">
-          <div class="p-comments__content-image">
-            <img src="img/comments1@2x.png" alt="">
+      <span class="p-comments__bg"></span>
+      <div class="p-comments__inner">
+        <div class="p-comments__container">
+          <h2 class="p-comments__section-title c-text__section-title">
+            Comments
+          </h2>
+          <div class="p-comments__content">
+            <div class="p-comments__content-image">
+              <img src="img/comments1@2x.png" alt="">
+            </div>
+            <p class="p-comments__content-text">
+              どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+            </p>
           </div>
-          <p class="p-comments__content-text">
-            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-          </p>
-        </div>
-        <div class="p-comments__content">
-          <div class="p-comments__content-image">
-            <img src="img/comments2@2x.png" alt="">
+          <div class="p-comments__content">
+            <div class="p-comments__content-image">
+              <img src="img/comments2@2x.png" alt="">
+            </div>
+            <p class="p-comments__content-text">
+              どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+            </p>
           </div>
-          <p class="p-comments__content-text">
-            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-          </p>
         </div>
+        <span class="p-comments__bg-image">
+          <img src="img/comments3@2x.png" alt="">
+        </span>
       </div>
     </div>
     <div id="qanda" class="p-qanda">
       <h2 class="p-qanda__section-title c-text__section-title">
         Q&A
       </h2>
-      <div class="p-qanda__container">
-        <div class="p-qanda__content-question-container">
-          <span class="p-qanda__content-question-mark">
-            Q
-          </span>
-          <p class="p-qanda__content-question-text c-text">
-            質問質問質問？
+      <div class="p-qanda__inner">
+        <div class="p-qanda__container js-qanda-container">
+          <div class="p-qanda__content-question-container">
+            <span class="p-qanda__content-question-mark">
+              Q
+            </span>
+            <p class="p-qanda__content-question-text c-text">
+              質問質問質問？
+            </p>
+            <button>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+            </button>
+          </div>
+          <p class="p-qanda__content-answer-text c-text js-qnada-answer">
+            回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
           </p>
-          <button>
-            <span class="p-qanda__content-question-toggle-line"></span>
-            <span class="p-qanda__content-question-toggle-line"></span>
-          </button>
         </div>
-        <p class="p-qanda__content-answer-text c-text">
-          回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
-        </p>
-      </div>
-      <div class="p-qanda__container">
-        <div class="p-qanda__content-question-container">
-          <span class="p-qanda__content-question-mark">
-            Q
-          </span>
-          <p class="p-qanda__content-question-text c-text">
-            質問質問質問？<br>
-            また、質問は質問質問？
+        <div class="p-qanda__container js-qanda-container">
+          <div class="p-qanda__content-question-container">
+            <span class="p-qanda__content-question-mark">
+              Q
+            </span>
+            <p class="p-qanda__content-question-text c-text">
+              質問質問質問？<br>
+              また、質問は質問質問？
+            </p>
+            <button>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+            </button>
+          </div>
+          <p class="p-qanda__content-answer-text c-text js-qnada-answer">
+            回答回答回答回答回答回答回答回答回答回答回答回答
           </p>
-          <button>
-            <span class="p-qanda__content-question-toggle-line"></span>
-            <span class="p-qanda__content-question-toggle-line"></span>
-          </button>
         </div>
-        <p class="p-qanda__content-answer-text">
-          回答回答回答回答回答回答回答回答回答回答回答回答
-        </p>
-      </div>
-      <div class="p-qanda__container">
-        <div class="p-qanda__content-question-container">
-          <span class="p-qanda__content-question-mark">
-            Q
-          </span>
-          <p class="p-qanda__content-question-text c-text">
-            質問質問質問？
+        <div class="p-qanda__container js-qanda-container">
+          <div class="p-qanda__content-question-container">
+            <span class="p-qanda__content-question-mark">
+              Q
+            </span>
+            <p class="p-qanda__content-question-text c-text">
+              質問質問質問？
+            </p>
+            <button>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+            </button>
+          </div>
+          <p class="p-qanda__content-answer-text c-text js-qnada-answer">
+            回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
           </p>
-          <button>
-            <span class="p-qanda__content-question-toggle-line"></span>
-            <span class="p-qanda__content-question-toggle-line"></span>
-          </button>
         </div>
-        <p class="p-qanda__content-answer-text">
-          回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
-        </p>
-      </div>
-      <div class="p-qanda__container">
-        <div class="p-qanda__content-question-container">
-          <span class="p-qanda__content-question-mark">
-            Q
-          </span>
-          <p class="p-qanda__content-question-text c-text">
-            質問質問質問？
+        <div class="p-qanda__container js-qanda-container">
+          <div class="p-qanda__content-question-container">
+            <span class="p-qanda__content-question-mark">
+              Q
+            </span>
+            <p class="p-qanda__content-question-text c-text">
+              質問質問質問？
+            </p>
+            <button>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+            </button>
+          </div>
+          <p class="p-qanda__content-answer-text c-text js-qnada-answer">
+            回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
           </p>
-          <button>
-            <span class="p-qanda__content-question-toggle-line"></span>
-            <span class="p-qanda__content-question-toggle-line"></span>
-          </button>
         </div>
-        <p class="p-qanda__content-answer-text">
-          回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
-        </p>
-      </div>
-      <div class="p-qanda__container">
-        <div class="p-qanda__content-question-container">
-          <span class="p-qanda__content-question-mark">
-            Q
-          </span>
-          <p class="p-qanda__content-question-text c-text">
-            質問質問質問？
+        <div class="p-qanda__container js-qanda-container">
+          <div class="p-qanda__content-question-container">
+            <span class="p-qanda__content-question-mark">
+              Q
+            </span>
+            <p class="p-qanda__content-question-text c-text">
+              質問質問質問？
+            </p>
+            <button>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+            </button>
+          </div>
+          <p class="p-qanda__content-answer-text c-text js-qnada-answer">
+            回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
           </p>
-          <button>
-            <span class="p-qanda__content-question-toggle-line"></span>
-            <span class="p-qanda__content-question-toggle-line"></span>
-          </button>
         </div>
-        <p class="p-qanda__content-answer-text">
-          回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
-        </p>
-      </div>
-      <div class="p-qanda__container">
-        <div class="p-qanda__content-question-container">
-          <span class="p-qanda__content-question-mark">
-            Q
-          </span>
-          <p class="p-qanda__content-question-text c-text">
-            質問質問質問？
+        <div class="p-qanda__container js-qanda-container">
+          <div class="p-qanda__content-question-container">
+            <span class="p-qanda__content-question-mark">
+              Q
+            </span>
+            <p class="p-qanda__content-question-text c-text">
+              質問質問質問？
+            </p>
+            <button>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+              <span class="p-qanda__content-question-cross-line js-cross-menu-line"></span>
+            </button>
+          </div>
+          <p class="p-qanda__content-answer-text c-text js-qnada-answer">
+            回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
           </p>
-          <button>
-            <span class="p-qanda__content-question-toggle-line"></span>
-            <span class="p-qanda__content-question-toggle-line"></span>
-          </button>
         </div>
-        <p class="p-qanda__content-answer-text">
-          回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
-        </p>
       </div>
     </div>
     <div id="access" class="p-access">
@@ -581,10 +595,10 @@ function spaceTrim ($str) {
       <div class="p-footer__inner">
         <div class="p-footer__icon-container">
           <a href="#">
-            <i class="fab fa-twitter"></i>
+            <i class="fab fa-twitter c-sns-icon"></i>
           </a>
           <a href="#">
-            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook c-sns-icon"></i>
           </a>
         </div>
         <div class="p-footer__link-container">

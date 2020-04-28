@@ -28,17 +28,21 @@
           </h1>
         </a>
       </div>
-      <button class="p-header__menu">
+      <button class="p-header__hamburger-menu js-hamburger-menu">
         <img src="<%= path %>/img/svg/hamburger.svg" alt="">
       </button>
-      <nav class="p-header__nav">
+      <span class="p-header__nav-filter js-nav-filter"></span>
+      <nav class="p-header__nav js-header-nav">
+        <button class="p-header__close-button js-header-close-button">
+          <img src="<%= path %>/img/svg/batsu.svg" alt="">
+        </button>
         <ul class="p-header__list">
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#news">News</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#service">Service</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#results">Results</a></li>
-          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#faqs">FAQs</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#price">Price</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#comments">Comments</a></li>
+          <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#qanda">FAQs</a></li>
           <li class="p-header__item"><a class="js-smoothscroll" href="<%= scrollPath %>#contact">Contact</a></li>
         </ul>
       </nav>

@@ -9,10 +9,20 @@
   padding-top: 206px;
   background: url(../img/mv@2x.png) no-repeat left / cover;
 
+  @include mq(pc) {
+    height: 648px;
+  }
+
   &__inner {
     width: 100%;
     max-width: $max-width-inner-sp;
     margin: auto;
+
+    @include mq(pc) {
+      width: 633px;
+      padding-right: 109px;
+      margin: 0 0 0 auto;
+    }
   }
 
   &__catch-main {
@@ -22,6 +32,11 @@
     line-height: calc(45 / 24);
     color: $color-text-section-title;
     letter-spacing: 0.002em;
+
+    @include mq(pc) {
+      font-size: 3rem;
+      line-height: calc(30 / 24);
+    }
   }
 
   &__catch-sub {
@@ -30,10 +45,20 @@
     line-height: calc(26 / 24);
     color: $color-text-section-title;
     letter-spacing: 0.04em;
+
+    @include mq(pc) {
+      font-size: 1.8rem;
+      letter-spacing: 0.045em;
+    }
   }
 
   &__contact-button {
     width: 232px;
     margin: auto;
+
+    @include mq(pc) {
+      width: 280px;
+      margin: 0 auto 0 0;
+    }
   }
 }

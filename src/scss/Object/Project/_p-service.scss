@@ -6,15 +6,28 @@
   height: 928px;
   background-color: #f3f3f3;
 
+  @include mq(pc) {
+    height: 655px;
+  }
+
   &__inner {
     height: 480px;
     padding: 40px 0;
     background-color: $color-service-bg;
+
+    @include mq(pc) {
+      height: 400px;
+      padding: 80px 0;
+    }
   }
 
   &__section-title {
     margin-bottom: 40px;
     color: #fff;
+
+    @include mq(pc) {
+      margin-bottom: 80px;
+    }
   }
 
   &__container {
@@ -26,12 +39,24 @@
     margin: auto;
     background-color: #fff;
     box-shadow: 0 5px 12px #3e3e3e33;
+
+    @include mq(pc) {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 960px;
+      padding: 60px 48px 54px;
+    }
   }
 
   &__content {
     margin-bottom: 60px;
 
     &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mq(pc) {
+      width: 231px;
       margin-bottom: 0;
     }
   }

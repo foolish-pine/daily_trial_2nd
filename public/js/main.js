@@ -4,44 +4,27 @@
 
 $(function () {
   // ---------------------------------------------
-  // スティッキーヘッダー
-  // ---------------------------------------------
-
-  var $window = $(window),
-    $header = $(".p-header"),
-    threshold = $(".js-sticky-header-threshold").outerHeight();
-
-  $window.on("scroll", function () {
-    if ($window.scrollTop() > threshold) {
-      $header.addClass("visible");
-    } else {
-      $header.removeClass("visible");
-    }
-  });
-
-  // ---------------------------------------------
   // ハンバーガーメニュー
   // ---------------------------------------------
-  var $headerNav = $(".p-header__nav"),
+  var $headerNav = $(".js-header-nav"),
     $hamburgerMenu = $(".js-hamburger-menu"),
-    $hamburgerMenuLine = $(".js-hamburger-menu-line");
+    $headerCloseButton = $(".js-header-close-button"),
+    $navFilter = $(".js-nav-filter"),
+    $qandaContainer = $(".js-qanda-container"),
+    $qnadaAnswer = $(".js-qnada-answer"),
+    $crossMenuLine = $(".js-cross-menu-line");
 
-  var mqPC = window.matchMedia("screen and (max-width:1439px)");
+  var mqPC = window.matchMedia("screen and (max-width:767px)");
 
-  // ウィンドウリサイズ時
+  // ウィンドウリサイズ時にヘッダーメニュー閉じる
   $(window).on("resize", function () {
-    $headerNav.removeClass("open");
-    $hamburgerMenuLine.stop(true).removeClass("active");
-    $(".p-header__nav-filter").fadeOut();
     if (mqPC.matches) {
       // sp, tabサイズのとき
       $headerNav.css({
-        right: "-100vw",
+        right: "-300px",
       });
-    } else {
-      $headerNav.css({
-        right: "-590px",
-      });
+      $headerCloseButton.fadeOut();
+      $navFilter.fadeOut();
     }
   });
 
@@ -49,61 +32,24 @@ $(function () {
   var duration = 300;
 
   $hamburgerMenu.on("click", function () {
-    $hamburgerMenuLine.stop(true).toggleClass("active");
-    $headerNav.toggleClass("open");
     if (mqPC.matches) {
       // sp, tabサイズのとき
-      if ($headerNav.hasClass("open")) {
-        $headerNav.stop(true).animate(
-          {
-            right: "0",
-          },
-          duration,
-          "swing"
-        );
-      } else {
-        $headerNav.stop(true).animate(
-          {
-            right: "-100vw",
-          },
-          duration,
-          "swing"
-        );
-      }
-    } else {
-      // PCサイズのとき
-      if ($headerNav.hasClass("open")) {
-        $headerNav.stop(true).animate(
-          {
-            right: "0",
-          },
-          duration,
-          "swing"
-        );
-        $(".p-header__nav-filter").addClass("active");
-        $(".p-header__nav-filter").fadeIn();
-      } else {
-        $headerNav.stop(true).animate(
-          {
-            right: "-590px",
-          },
-          duration,
-          "swing"
-        );
-        $(".p-header__nav-filter").removeClass("active");
-        $(".p-header__nav-filter").fadeOut();
-      }
+      $headerNav.stop(true).animate(
+        {
+          right: "0",
+        },
+        duration,
+        "swing"
+      );
+      $headerCloseButton.fadeIn();
+      $navFilter.stop(true).fadeIn();
     }
   });
 
   // ナビの余白クリックでメニュー閉じる
   $headerNav.on("click", function () {
-    $hamburgerMenuLine.stop(true).removeClass("active");
-    $headerNav.removeClass("open");
     if (mqPC.matches) {
       // sp, tabサイズのとき
-      $hamburgerMenuLine.stop(true).removeClass("active");
-      $headerNav.removeClass("open");
       $headerNav.stop(true).animate(
         {
           right: "-100vw",
@@ -111,33 +57,28 @@ $(function () {
         duration,
         "swing"
       );
-    } else {
-      // PCサイズのとき
-      $headerNav.stop(true).animate(
-        {
-          right: "-590px",
-        },
-        duration,
-        "swing"
-      );
-      $(".p-header__nav-filter").removeClass("active");
-      $(".p-header__nav-filter").fadeOut();
+      $headerCloseButton.fadeOut();
+      $navFilter.stop(true).fadeOut();
     }
   });
 
   // navの外側クリックでnav閉じる
-  $(".p-header__nav-filter").on("click", function () {
-    $hamburgerMenuLine.stop(true).removeClass("active");
-    $headerNav.removeClass("open");
+  $navFilter.on("click", function () {
     $headerNav.stop(true).animate(
       {
-        right: "-590px",
+        right: "-300px",
       },
       duration,
       "swing"
     );
-    $(".p-header__nav-filter").removeClass("active");
-    $(".p-header__nav-filter").fadeOut();
+    $headerCloseButton.fadeOut();
+    $navFilter.stop(true).fadeOut();
+  });
+
+  // Q&Aをクリックで回答を表示する
+  $qandaContainer.on("click", function () {
+    $(this).find($qnadaAnswer).stop(true).slideToggle();
+    $(this).find($crossMenuLine).stop(true).toggleClass("active");
   });
 
   // ---------------------------------------------
@@ -194,5 +135,6 @@ $(function () {
     autoplaySpeed: 3000,
     dots: true,
     arrows: false,
+    variableWidth: true,
   });
 });
