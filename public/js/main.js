@@ -145,4 +145,20 @@ $(function () {
     arrows: false,
     variableWidth: true,
   });
+
+  // ---------------------------------------------
+  // contactページでのヘッダー調整
+  // ---------------------------------------------
+
+  $(window).on("load resize", function () {
+    if (document.URL.match("contact/")) {
+      if (mqPC.matches) {
+        // sp, tabサイズのとき
+        $("#contact").css({ paddingTop: 108 });
+      } else {
+        $header.css({ backgroundColor: "#fff" });
+        $("#contact").css({ paddingTop: 160 });
+      }
+    }
+  });
 });

@@ -527,7 +527,8 @@ button:focus {
 
 @media print, screen and (min-width: 768px) {
   .p-access__bg {
-    width: 980px;
+    width: 100%;
+    max-width: 980px;
     height: 566px;
   }
 }
@@ -679,7 +680,8 @@ button:focus {
   .p-comments__bg {
     top: 150px;
     z-index: 10;
-    width: 980px;
+    width: 100%;
+    max-width: 980px;
     height: 596px;
   }
 }
@@ -1306,7 +1308,6 @@ button:focus {
   color: #e3e3e3;
   text-align: center;
   text-decoration: none;
-  white-space: nowrap;
 }
 
 @media print, screen and (min-width: 768px) {

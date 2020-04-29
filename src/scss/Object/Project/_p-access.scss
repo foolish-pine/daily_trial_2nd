@@ -19,7 +19,8 @@
     background: $color-comments-bg;
 
     @include mq(pc) {
-      width: 980px;
+      width: 100%;
+      max-width: 980px;
       height: 566px;
     }
   }
