@@ -389,9 +389,9 @@ button:focus {
   }
 }
 
-.c-button--default-white-letter a {
+.c-button--default-white-letter a,
+.c-button--default-white-letter input {
   display: block;
-  font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 54px;
@@ -403,7 +403,8 @@ button:focus {
 }
 
 @media print, screen and (min-width: 768px) {
-  .c-button--default-white-letter a:hover {
+  .c-button--default-white-letter a:hover,
+  .c-button--default-white-letter input:hover {
     color: #3e3e3e;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -427,9 +428,9 @@ button:focus {
   }
 }
 
-.c-button--default-black-letter a {
+.c-button--default-black-letter a,
+.c-button--default-black-letter input {
   display: block;
-  font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 54px;
@@ -441,11 +442,30 @@ button:focus {
 }
 
 @media print, screen and (min-width: 768px) {
-  .c-button--default-black-letter a:hover {
+  .c-button--default-black-letter a:hover,
+  .c-button--default-black-letter input:hover {
     color: #fff;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
+}
+
+.c-button--back {
+  width: 311px;
+  height: 54px;
+  text-align: center;
+  background: #fff;
+}
+
+.c-button--back a,
+.c-button--back input {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 54px;
+  color: #3e3e3e;
+  text-decoration: none;
+  letter-spacing: 0.36em;
 }
 
 /* ===================================================================
@@ -829,12 +849,19 @@ button:focus {
 
 .p-contact__error-list {
   padding: 10px 30px;
+  margin: auto;
   margin-bottom: 30px;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   color: #ff2e5a;
   text-align: left;
   border: 1px solid #ff2e5a;
   border-radius: 5px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contact__error-list {
+    margin-bottom: 40px;
+  }
 }
 
 .p-contact__form {
@@ -847,6 +874,16 @@ button:focus {
     width: 100%;
     max-width: calc(780 / 960 * 100%);
     padding: 58px 0;
+  }
+}
+
+.p-contact__text--confirmation {
+  margin-bottom: 30px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contact__text--confirmation {
+    margin-bottom: 40px;
   }
 }
 
@@ -906,6 +943,14 @@ button:focus {
   }
 }
 
+@media print, screen and (min-width: 768px) {
+  .p-contact__select--confirmation {
+    width: 505px;
+    height: 34px;
+    font-size: 2.2rem;
+  }
+}
+
 .p-contact__label-required {
   display: inline-block;
   width: 50px;
@@ -950,6 +995,14 @@ button:focus {
 
 @media print, screen and (min-width: 768px) {
   .p-contact__textbox {
+    width: 505px;
+    height: 34px;
+    font-size: 2.2rem;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contact__textbox--confirmation {
     width: 505px;
     height: 34px;
     font-size: 2.2rem;
@@ -1009,6 +1062,10 @@ button:focus {
   }
 }
 
+.p-contact__textarea--confirmation {
+  font-size: 1.6rem;
+}
+
 .p-contact__agree {
   margin-bottom: 18px;
 }
@@ -1051,6 +1108,12 @@ button:focus {
   }
 }
 
+.p-contact__agree-text--comfirmation {
+  padding: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
 .p-contact__button {
   width: 121px;
   margin: auto;
@@ -1059,12 +1122,35 @@ button:focus {
 @media print, screen and (min-width: 768px) {
   .p-contact__button {
     width: 174px;
+    height: 50px;
     margin: 0 auto 0 0;
   }
 }
 
 .p-contact__button input {
   width: 100%;
+}
+
+.p-contact__button--confirmation {
+  margin: auto;
+}
+
+.p-contact__button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.p-contact__text--submit {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.p-contact__button--top {
+  margin: auto;
 }
 
 /* ================================================================

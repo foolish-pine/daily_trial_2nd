@@ -44,9 +44,9 @@
     }
   }
 
-  a {
+  a,
+  input {
     display: block;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 54px;
@@ -78,9 +78,9 @@
     }
   }
 
-  a {
+  a,
+  input {
     display: block;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 54px;
@@ -95,5 +95,23 @@
         transition: 0.4s;
       }
     }
+  }
+}
+
+.c-button--back {
+  width: 311px;
+  height: 54px;
+  text-align: center;
+  background: #fff;
+
+  a,
+  input {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 54px;
+    color: #3e3e3e;
+    text-decoration: none;
+    letter-spacing: 0.36em;
   }
 }

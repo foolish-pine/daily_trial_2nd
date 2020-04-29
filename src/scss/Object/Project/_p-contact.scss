@@ -59,12 +59,17 @@
 
   &__error-list {
     padding: 10px 30px;
+    margin: auto;
     margin-bottom: 30px;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     color: #ff2e5a;
     text-align: left;
     border: 1px solid #ff2e5a;
     border-radius: 5px;
+
+    @include mq(pc) {
+      margin-bottom: 40px;
+    }
   }
 
   &__form {
@@ -75,6 +80,14 @@
       width: 100%;
       max-width: calc(780 / 960 * 100%);
       padding: 58px 0;
+    }
+  }
+
+  &__text--confirmation {
+    margin-bottom: 30px;
+
+    @include mq(pc) {
+      margin-bottom: 40px;
     }
   }
 
@@ -128,6 +141,14 @@
     }
   }
 
+  &__select--confirmation {
+    @include mq(pc) {
+      width: 505px;
+      height: 34px;
+      font-size: 2.2rem;
+    }
+  }
+
   &__label-required {
     display: inline-block;
     width: 50px;
@@ -163,6 +184,14 @@
     border-bottom: 1px solid $color-form-border;
     outline: none;
 
+    @include mq(pc) {
+      width: 505px;
+      height: 34px;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__textbox--confirmation {
     @include mq(pc) {
       width: 505px;
       height: 34px;
@@ -217,6 +246,10 @@
     }
   }
 
+  &__textarea--confirmation {
+    font-size: 1.6rem;
+  }
+
   &__agree {
     margin-bottom: 18px;
 
@@ -253,17 +286,42 @@
     }
   }
 
+  &__agree-text--comfirmation {
+    padding: 0;
+    font-weight: 700;
+    text-align: center;
+  }
+
   &__button {
     width: 121px;
     margin: auto;
 
     @include mq(pc) {
       width: 174px;
+      height: 50px;
       margin: 0 auto 0 0;
     }
 
     input {
       width: 100%;
     }
+  }
+
+  &__button--confirmation {
+    margin: auto;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text--submit {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__button--top {
+    margin: auto;
   }
 }
