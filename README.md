@@ -10,13 +10,6 @@
 <br>
 <br>
 
-## デザインデータについて
-このサイトのデザインデータは「デイトラ」様にて配布されていたものです。<br>
-<br>
-[デイトラ](https://www.daily-trial.com/)
-<br>
-<br>
-
 ## 制作に使用した言語・ツール
 HTML / CSS / Sass / JavaScript(jQuery) / PHP / gulp / Adobe XD / Visual Studio Code
 <br>
@@ -28,4 +21,4 @@ HTML / CSS / Sass / JavaScript(jQuery) / PHP / gulp / Adobe XD / Visual Studio C
 <br>
 
 ## スクリーンショット
-<img src="https://github.com/foolish-pine/Cresta_beginner/blob/master/src/img/daily-trial-2nd-pc.png?raw=true" height=700px> <img src="https://github.com/foolish-pine/Cresta_beginner/blob/master/src/img/daily-trial-2nd-sp.png?raw=true" height=700px>
+<img src="https://github.com/foolish-pine/daily-trial-2nd/blob/master/src/img/daily-trial-2nd-pc.png?raw=true" height=700px> <img src="https://github.com/foolish-pine/daily-trial-2nd/blob/master/src/img/daily-trial-2nd-sp.png?raw=true" height=700px>
