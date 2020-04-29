@@ -20,7 +20,7 @@
     box-shadow: 0 5px 12px #3e3e3e33;
 
     @include mq(pc) {
-      max-width: 1180px;
+      max-width: calc(1180 / 1366 * 100%);
       padding: 60px 50px 40px;
       margin: 0 auto;
     }
@@ -36,7 +36,7 @@
 
   &__content {
     position: relative;
-    padding: 13px 47px 16px 16px;
+    padding: 13px 47px 14px 16px;
     border-top: 1px solid #cecdcd;
 
     &:last-child {
@@ -45,16 +45,24 @@
 
     @include mq(pc) {
       display: flex;
-      padding: 40px 0 40px 10px;
+      padding: 37px 50px 39px 10px;
+      transition: 0.4s;
+
+      &:hover {
+        background-color: #e6eeff;
+        transition: 0.4s;
+      }
     }
 
     &::after {
       position: absolute;
-      top: 57px;
-      right: 15px;
+      top: 0;
+      right: 13px;
+      bottom: 0;
       display: block;
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
+      margin: auto;
       content: "";
       border-top: 3px solid #3e3e3e;
       border-right: 3px solid #3e3e3e;
@@ -69,42 +77,50 @@
   &__content-time-icon {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 
     @include mq(pc) {
+      min-width: 227px;
       margin-bottom: 0;
-    }
-
-    time {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.4rem;
-      letter-spacing: 0.035em;
     }
   }
 
+  &__content-time {
+    letter-spacing: 0.035em;
+    white-space: nowrap;
+  }
+
   &__content-icon-1 {
-    display: inline-block;
-    width: 89px;
+    display: inline;
+    min-width: 89px;
     height: 24px;
     margin-left: 20px;
     font-size: 1.2rem;
+    color: $color-text;
     text-align: center;
     letter-spacing: 0.03em;
+    background: #fff;
     border: 2px solid #3b69ff;
     border-radius: 50px;
 
     @include mq(pc) {
-      margin-left: 60px;
+      min-width: 125px;
+      height: 28px;
+      margin-left: 58px;
+      font-size: 1.4rem;
+      line-height: 28px;
     }
   }
 
   &__content-text {
     font-weight: 500;
+    line-height: calc(22 / 14);
     letter-spacing: -0.035rem;
 
     @include mq(pc) {
-      max-width: 697px;
-      margin-left: 60px;
+      width: 697px;
+      margin-left: 66px;
+      letter-spacing: 0.045rem;
     }
   }
 
@@ -122,10 +138,6 @@
 
       @include mq(pc) {
         line-height: 64px;
-        &:hover {
-          color: #fff;
-          background-color: $color-text;
-        }
       }
     }
   }

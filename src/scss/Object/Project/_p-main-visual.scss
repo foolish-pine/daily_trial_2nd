@@ -6,54 +6,61 @@
   position: relative;
   z-index: 10;
   height: 667px;
-  padding-top: 206px;
   background: url(../img/mv@2x.png) no-repeat left / cover;
 
   @include mq(pc) {
     height: 648px;
   }
 
-  &__inner {
+  &__catch-container {
+    position: absolute;
+    top: 199px;
+    right: 0;
+    left: 0;
     width: 100%;
-    max-width: $max-width-inner-sp;
+    max-width: calc(336 / 375 * 100%);
     margin: auto;
 
     @include mq(pc) {
       width: 633px;
-      padding-right: 109px;
+      padding: 18px 109px 0 0;
       margin: 0 0 0 auto;
     }
   }
 
   &__catch-main {
-    margin-bottom: 40px;
+    margin-bottom: 31px;
     font-size: 2.4rem;
     font-weight: 700;
     line-height: calc(45 / 24);
     color: $color-text-section-title;
     letter-spacing: 0.002em;
+    white-space: nowrap;
 
     @include mq(pc) {
+      margin-bottom: 36px;
       font-size: 3rem;
-      line-height: calc(30 / 24);
+      line-height: 1.5;
     }
   }
 
   &__catch-sub {
     margin-bottom: 40px;
     font-size: 1.6rem;
-    line-height: calc(26 / 24);
+    line-height: calc(26 / 16);
     color: $color-text-section-title;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
 
     @include mq(pc) {
       font-size: 1.8rem;
-      letter-spacing: 0.045em;
+      line-height: calc(26 / 18);
+      letter-spacing: 0.025em;
     }
   }
 
   &__contact-button {
     width: 232px;
+    height: 50px;
     margin: auto;
 
     @include mq(pc) {

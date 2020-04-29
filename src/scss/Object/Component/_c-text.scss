@@ -7,6 +7,10 @@
   font-weight: 400;
   color: $color-text;
 
+  @include mq(pc) {
+    font-size: 1.8rem;
+  }
+
   &__section-title {
     font-family: "Montserrat", sans-serif;
     font-size: 3rem;

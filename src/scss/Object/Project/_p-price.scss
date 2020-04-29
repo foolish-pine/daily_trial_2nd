@@ -4,16 +4,16 @@
 
 .p-price {
   position: relative;
-  padding: 40px 0 150px;
-  background-color: $color-price-bg;
+  padding: 40px 0 118px;
+  background-color: $color-base-bg;
 
   @include mq(pc) {
-    padding: 80px 0 150px;
+    padding: 80px 0 130px;
   }
 
   &__inner {
-    width: 100%;
-    max-width: $max-width-inner-sp;
+    width: $max-width-inner-sp;
+    max-width: 960px;
     margin: auto;
 
     @include mq(pc) {
@@ -31,18 +31,22 @@
 
   &__table {
     width: 100%;
-    margin: 0 auto 14px;
+    margin: 0 auto 11px;
     border-collapse: collapse;
     border: 1px solid #707070;
 
     @include mq(pc) {
-      margin: 0 auto 24px;
+      margin: 0 auto 22px;
     }
   }
 
   &__table-row {
-    height: 60.5px;
+    height: 60px;
     border-bottom: 1px solid #707070;
+
+    @include mq(pc) {
+      height: 59px;
+    }
   }
 
   &__table-header {
@@ -51,6 +55,11 @@
     font-weight: 600;
     color: #fff;
     background-color: #3e3e3e;
+
+    @include mq(pc) {
+      font-size: 2.4rem;
+      letter-spacing: 0.07em;
+    }
   }
 
   &__table-data {
@@ -63,7 +72,8 @@
     background-color: #fff;
 
     @include mq(pc) {
-      padding-left: 30px;
+      padding-left: 40px;
+      font-size: 2.4rem;
     }
   }
 

@@ -3,52 +3,122 @@
    ================================================================ */
 
 .p-access {
-  background-color: $color-access-box;
+  position: relative;
+  height: 574px;
+  background-color: $color-base-bg;
+
+  @include mq(pc) {
+    height: 774px;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 574px;
+    background: $color-comments-bg;
+
+    @include mq(pc) {
+      width: 980px;
+      height: 566px;
+    }
+  }
 
   &__inner {
+    position: relative;
+    z-index: 11;
     width: 100%;
     max-width: $max-width-inner-sp;
     padding: 40px 0;
     margin: auto;
+
+    @include mq(pc) {
+      display: flex;
+      justify-content: space-between;
+      max-width: $max-width-inner-pc;
+      padding: 128px 0;
+    }
+  }
+
+  &__text-container {
+    margin-bottom: 15px;
+
+    @include mq(pc) {
+      position: relative;
+      z-index: 20;
+      margin: 0 50px 0 0;
+    }
   }
 
   &__section-title {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
     color: #fff;
     text-align: left;
+
+    @include mq(pc) {
+      margin-bottom: 38px;
+    }
   }
 
   &__address {
-    margin-bottom: 19px;
     font-size: 1.2rem;
     line-height: 2;
     color: #fff;
+
+    @include mq(pc) {
+      margin-bottom: 38px;
+      font-size: 1.6rem;
+      line-height: calc(26 / 16);
+    }
   }
 
   &__google-map {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+
+    @include mq(pc) {
+      position: relative;
+      z-index: 20;
+      width: calc(720 / 1180 * 100%);
+      box-shadow: 0 0 10px #3e3e3e33;
+    }
 
     iframe {
       width: 100%;
       height: 241px;
+
+      @include mq(pc) {
+        height: 515px;
+      }
     }
   }
 
   &__button {
-    width: 100%;
-    max-width: $max-width-inner-sp;
+    width: 343px;
     margin: auto;
     border: 1px solid $color-button-default;
 
-    a {
-      color: #fff;
+    @include mq(pc) {
+      width: 326px;
+      height: 64px;
+    }
 
-      &:hover {
-        @include mq(pc) {
-          color: #fff;
-          background-color: $color-text;
-        }
+    a {
+      @include mq(pc) {
+        line-height: 64px;
       }
+    }
+  }
+
+  &__button--sp {
+    @include mq(pc) {
+      display: none;
+    }
+  }
+
+  &__button--pc {
+    display: none;
+    @include mq(pc) {
+      display: block;
     }
   }
 }

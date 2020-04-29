@@ -3,7 +3,6 @@
    =================================================================== */
 
 .c-button--contact {
-  height: 50px;
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
@@ -11,45 +10,108 @@
   border-radius: 10px;
   box-shadow: 0 3px 5px #3e3e3e33;
 
+  @include mq(pc) {
+    transition: 0.4s;
+
+    &:hover {
+      background: #ff9100;
+      transition: 0.4s;
+    }
+  }
+
   a,
   input {
     display: block;
     line-height: 50px;
     color: #fff;
     text-decoration: none;
-    letter-spacing: 0.045em;
+    letter-spacing: 0.03em;
     border-radius: 10px;
-    transition: 0.4s;
-
-    &:hover {
-      @include mq(pc) {
-        color: $color-button-contact;
-        background-color: #fff;
-        transition: 0.4s;
-      }
-    }
   }
 }
 
-.c-button--default {
+.c-button--default-white-letter {
   width: 311px;
   height: 54px;
   text-align: center;
+  background: #3e3e3e;
+  transition: 0.4s;
 
-  a {
+  @include mq(pc) {
+    &:hover {
+      background: #fff;
+      transition: 0.4s;
+    }
+  }
+
+  a,
+  input {
     display: block;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 54px;
+    color: #fff;
     text-decoration: none;
     letter-spacing: 0.36em;
     transition: 0.4s;
 
     @include mq(pc) {
       &:hover {
+        color: #3e3e3e;
         transition: 0.4s;
       }
     }
+  }
+}
+
+.c-button--default-black-letter {
+  width: 311px;
+  height: 54px;
+  text-align: center;
+  background: #fff;
+  transition: 0.4s;
+
+  @include mq(pc) {
+    &:hover {
+      background: #3e3e3e;
+      transition: 0.4s;
+    }
+  }
+
+  a,
+  input {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 54px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.36em;
+    transition: 0.4s;
+
+    @include mq(pc) {
+      &:hover {
+        color: #fff;
+        transition: 0.4s;
+      }
+    }
+  }
+}
+
+.c-button--back {
+  width: 311px;
+  height: 54px;
+  text-align: center;
+  background: #fff;
+
+  a,
+  input {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 54px;
+    color: #3e3e3e;
+    text-decoration: none;
+    letter-spacing: 0.36em;
   }
 }
