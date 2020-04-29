@@ -4,7 +4,7 @@
 
 .p-service {
   height: 928px;
-  background-color: #f3f3f3;
+  background-color: $color-base-bg;
 
   @include mq(pc) {
     height: 655px;
@@ -35,7 +35,7 @@
     flex-direction: column;
     width: 100%;
     max-width: $max-width-inner-sp;
-    padding: 40px 16px;
+    padding: 40px 16px 38px;
     margin: auto;
     background-color: #fff;
     box-shadow: 0 5px 12px #3e3e3e33;
@@ -43,13 +43,21 @@
     @include mq(pc) {
       flex-direction: row;
       justify-content: space-between;
-      max-width: 960px;
-      padding: 60px 48px 54px;
+      max-width: calc(960 / 1366 * 100%);
+      padding: 55px 48px 0;
     }
   }
 
   &__content {
-    margin-bottom: 60px;
+    margin-bottom: 62px;
+
+    &:nth-child(2) {
+      margin-bottom: 64px;
+
+      @include mq(pc) {
+        margin: 0 5px 64px;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -57,28 +65,70 @@
 
     @include mq(pc) {
       width: 231px;
+      min-width: 160px;
       margin-bottom: 0;
     }
   }
 
-  &__content-image {
-    margin-bottom: 28px;
+  &__content-image--1 {
+    margin-bottom: 18px;
     text-align: center;
   }
 
+  &__content-image--2 {
+    position: relative;
+    height: 39px;
+    margin-bottom: 27px;
+    text-align: center;
+    vertical-align: bottom;
+
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+  &__content-image--3 {
+    position: relative;
+    height: 39px;
+    margin-bottom: 27px;
+    text-align: center;
+    vertical-align: bottom;
+
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
   &__content-title {
-    margin-bottom: 24px;
-    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: calc(24 / 18);
     color: #3e3e3e;
     text-align: center;
-    letter-spacing: 0.036em;
+    letter-spacing: 0.2em;
+
+    @include mq(pc) {
+      margin-bottom: 15px;
+      font-size: 2rem;
+      line-height: calc(30 / 20);
+      letter-spacing: 0.2em;
+    }
   }
 
   &__content-text {
     line-height: calc(24 / 14);
-    letter-spacing: 0.001;
+    letter-spacing: 0.001em;
+
+    @include mq(pc) {
+      font-size: 1.4rem;
+    }
   }
 }

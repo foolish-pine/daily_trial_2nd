@@ -7,30 +7,54 @@
   background: url(../img/alex-blajan-159378-unsplash@2x.png) no-repeat center /
     cover;
 
+  @include mq(pc) {
+    padding: 80px 0;
+  }
+
   &__container {
     width: 100%;
     max-width: $max-width-inner-sp;
     margin: auto;
     background: #fff;
     border-radius: 12px;
-  }
 
-  &__section-title {
-    margin-bottom: 10px;
-    color: #fff;
-  }
-
-  &__text {
-    font-size: 1.4rem;
-    line-height: calc(26 / 14);
-    color: #fff;
+    @include mq(pc) {
+      width: 95%;
+      max-width: 960px;
+    }
   }
 
   &__text-container {
+    height: 160px;
     padding: 32px 16px 36px;
-    background: url(../img/contact1@2x.png) no-repeat padding-box center;
+    background: url(../img/contact1@2x.png) no-repeat center;
     border-radius: 12px 12px 0 0;
     box-shadow: 0 3px 6px #00000029;
+
+    @include mq(pc) {
+      height: 200px;
+      padding: 62px 0;
+    }
+  }
+
+  &__section-title {
+    margin-bottom: 5px;
+    color: #fff;
+
+    @include mq(pc) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    line-height: calc(26 / 14);
+    color: #fff;
+
+    @include mq(pc) {
+      font-size: 1.6rem;
+      line-height: calc(22 / 16);
+      text-align: center;
+    }
   }
 
   &__error-list {
@@ -43,41 +67,64 @@
     border-radius: 5px;
   }
 
-  &__inner {
-    width: 100%;
-    max-width: calc(311 / 343 * 100%);
-    padding: 40px 0;
+  &__form {
+    padding: 36px 16px;
     margin: auto;
+
+    @include mq(pc) {
+      width: 100%;
+      max-width: calc(780 / 960 * 100%);
+      padding: 58px 0;
+    }
   }
 
   &__label {
+    position: relative;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     font-size: 1.6rem;
     color: $color-text;
     letter-spacing: 0;
+
+    @include mq(pc) {
+      min-width: 276px;
+      font-size: 2.2rem;
+    }
   }
 
   &__select-container {
     position: relative;
 
+    @include mq(pc) {
+      width: 261px;
+    }
+
     &::after {
       position: absolute;
-      top: 8px;
-      right: 12px;
+      top: 10px;
+      right: 15px;
       display: block;
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       content: "";
-      border-top: 3px solid #3e3e3e;
-      border-right: 3px solid #3e3e3e;
+      border-top: 2px solid #3e3e3e;
+      border-right: 2px solid #3e3e3e;
       transform: rotate(135deg);
     }
 
     select {
       width: 100%;
+      height: 32px;
+      padding-left: 9px;
+      line-height: 32px;
       border: 1px solid $color-form-border;
       outline: none;
+
+      @include mq(pc) {
+        &:hover {
+          box-shadow: 0 0 3px 2px #e6eeff;
+        }
+      }
     }
   }
 
@@ -85,41 +132,76 @@
     display: inline-block;
     width: 50px;
     height: 22px;
-    margin-left: 20px;
+    margin-left: 16px;
     font-size: 1.4rem;
     color: #fff;
     text-align: center;
     background: #ff4646;
     border-radius: 5px;
+
+    @include mq(pc) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0 auto 16px;
+    }
   }
 
-  &__request {
-    margin-bottom: 40px;
+  &__form-parts-container {
+    margin-bottom: 38px;
+
+    @include mq(pc) {
+      display: flex;
+      margin-bottom: 25px;
+    }
   }
 
   &__textbox {
     display: block;
     width: 100%;
-    padding-left: 10px;
-    margin-bottom: 40px;
+    padding: 0 0 2px 10px;
     border-bottom: 1px solid $color-form-border;
     outline: none;
+
+    @include mq(pc) {
+      width: 505px;
+      height: 34px;
+      font-size: 2.2rem;
+    }
   }
 
-  &__sex {
-    margin-bottom: 40px;
+  &__label--sex {
+    margin-bottom: 4px;
   }
 
   &__radio-button-container {
     display: block;
   }
 
+  &__radio {
+    margin-right: 11px;
+  }
+
+  &__radio-label {
+    @include mq(pc) {
+      font-size: 2rem;
+    }
+  }
+
   &__radio-label:last-child {
-    margin-left: 95px;
+    margin-left: 91px;
+
+    @include mq(pc) {
+      margin-left: 56px;
+    }
   }
 
   &__message {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+
+    @include mq(pc) {
+      margin-bottom: 27px;
+    }
 
     textarea {
       display: block;
@@ -128,19 +210,57 @@
       resize: none;
       border: 1px solid $color-form-border;
       outline: none;
+
+      @include mq(pc) {
+        height: 213px;
+      }
     }
   }
 
   &__agree {
+    margin-bottom: 18px;
+
+    @include mq(pc) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__agree-text {
+    position: relative;
+    padding-left: 38px;
     margin-bottom: 20px;
     font-size: 1.6rem;
     font-weight: 500;
-    letter-spacing: 0;
+
+    @include mq(pc) {
+      padding-left: 40px;
+      font-size: 1.8rem;
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      margin: auto;
+
+      @include mq(pc) {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 
   &__button {
     width: 121px;
     margin: auto;
+
+    @include mq(pc) {
+      width: 174px;
+      margin: 0 auto 0 0;
+    }
 
     input {
       width: 100%;

@@ -50,8 +50,8 @@ function spaceTrim ($str) {
   <link rel="icon" href="./img/favicon/favicon.ico" />
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/plugin/slick-theme.css" type="text/css">
   <link rel="stylesheet" href="./css/plugin/slick.css" />
+  <link rel="stylesheet" href="./css/plugin/slick-theme.css" type="text/css">
 </head>
 
 <body>
@@ -89,8 +89,8 @@ function spaceTrim ($str) {
   <!-- メインここから -->
   <main class="l-main">
     <!-- メインビジュアルここから -->
-    <div class="p-main-visual">
-      <div class="p-main-visual__inner">
+    <div class="p-main-visual js-sticky-header-threshold">
+      <div class="p-main-visual__catch-container">
         <p class="p-main-visual__catch-main">
           詩が生れて、画が出来る。
           <br>
@@ -116,7 +116,7 @@ function spaceTrim ($str) {
         <a class="p-news__content-link" href="#">
           <div class="p-news__content">
             <div class="p-news__content-time-icon">
-              <time datetime="2019-02-01">
+              <time class="p-news__content-time c-text" datetime="2019-02-01">
                 2019-02-01
               </time>
               <span class="p-news__content-icon-1">
@@ -131,7 +131,7 @@ function spaceTrim ($str) {
         <a class="p-news__content-link" href="#">
           <div class="p-news__content">
             <div class="p-news__content-time-icon">
-              <time datetime="2019-02-01">
+              <time class="p-news__content-time c-text" datetime="2019-02-01">
                 2019-02-01
               </time>
               <span class="p-news__content-icon-1">
@@ -146,7 +146,7 @@ function spaceTrim ($str) {
         <a class="p-news__content-link" href="#">
           <div class="p-news__content">
             <div class="p-news__content-time-icon">
-              <time datetime="2019-02-01">
+              <time class="p-news__content-time c-text" datetime="2019-02-01">
                 2019-02-01
               </time>
               <span class="p-news__content-icon-1">
@@ -158,7 +158,7 @@ function spaceTrim ($str) {
             </p>
           </div>
         </a>
-        <div class="p-news__button c-button--default">
+        <div class="p-news__button c-button--default-black-letter">
           <a href="#">
             MORE
           </a>
@@ -174,7 +174,7 @@ function spaceTrim ($str) {
         </h2>
         <div class="p-service__container">
           <div class="p-service__content">
-            <div class="p-service__content-image">
+            <div class="p-service__content-image--1">
               <img src="img/svg/service1.svg" alt="">
             </div>
             <p class="p-service__content-title">
@@ -186,7 +186,7 @@ function spaceTrim ($str) {
             </p>
           </div>
           <div class="p-service__content">
-            <div class="p-service__content-image">
+            <div class="p-service__content-image--2">
               <img src="img/svg/service2.svg" alt="">
             </div>
             <p class="p-service__content-title">
@@ -198,7 +198,7 @@ function spaceTrim ($str) {
             </p>
           </div>
           <div class="p-service__content">
-            <div class="p-service__content-image">
+            <div class="p-service__content-image--3">
               <img src="img/svg/service3.svg" alt="">
             </div>
             <p class="p-service__content-title">
@@ -287,7 +287,7 @@ function spaceTrim ($str) {
             </div>
           </div>
         </div>
-        <div class="p-results__button c-button--default">
+        <div class="p-results__button c-button--default-white-letter">
           <a href="#">
             VIEW ALL
           </a>
@@ -481,20 +481,28 @@ function spaceTrim ($str) {
       </div>
     </div>
     <div id="access" class="p-access">
+      <span class="p-access__bg"></span>
       <div class="p-access__inner">
-        <h2 class="p-access__section-title c-text__section-title">
-          Access
-        </h2>
-        <p class="p-access__address">
-          〒106-6126<br>
-          東京都港区六本木 6丁目 10-1<br>
-          六本木ヒルズ森タワー
-        </p>
+        <div class="p-access__text-container">
+          <h2 class="p-access__section-title c-text__section-title">
+            Access
+          </h2>
+          <p class="p-access__address">
+            〒106-6126<br>
+            東京都港区六本木 6丁目 10-1<br>
+            六本木ヒルズ森タワー
+          </p>
+          <div class="p-access__button p-access__button--pc c-button--default-white-letter">
+            <a href="#">
+              Google Maps
+            </a>
+          </div>
+        </div>
         <div class="p-access__google-map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.670815803256!2d139.72727301460444!3d35.66048118871842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b828453ffff%3A0xb8603beeb9b150d8!2z5YWt5pys5pyo44OS44Or44K65qOu44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1587858784728!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
           </iframe>
         </div>
-        <div class="p-access__button c-button--default">
+        <div class="p-access__button p-access__button--sp c-button--default-white-letter">
           <a href="#">
             Google Maps
           </a>
@@ -507,7 +515,7 @@ function spaceTrim ($str) {
           <h2 class="p-contact__section-title c-text__section-title">
             Contact Us
           </h2>
-          <p class="p-contact__text">
+          <p class="p-contact__text c-text">
             どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。
           </p>
         </div>
@@ -518,72 +526,70 @@ function spaceTrim ($str) {
           <?php endforeach; ?>
         </ul>
         <?php endif; ?>
-        <div class="p-contact__inner">
-          <form action="" method="post">
-            <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
-            <div class="p-contact__request">
-              <p class="p-contact__label">
-                お問い合わせ種別
-                <span class="p-contact__label-required">必須</span>
-              </p>
-              <div class="p-contact__select-container">
-                <select class="p-contact__label" name="お問い合わせ種別">
-                  <option value="">選択してください</option>
-                  <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-                </select>
-              </div>
+        <form class="p-contact__form" action="" method="post">
+          <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
+          <div class="p-contact__form-parts-container">
+            <p class="p-contact__label">
+              お問い合わせ種別
+              <span class="p-contact__label-required">必須</span>
+            </p>
+            <div class="p-contact__select-container">
+              <select name="お問い合わせ種別">
+                <option value="">選択してください</option>
+                <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+              </select>
             </div>
-            <div class="p-contact__name">
-              <label for="name" class="p-contact__label">
-                氏名
-                <span class="p-contact__label-required">必須</span>
+          </div>
+          <div class="p-contact__form-parts-container">
+            <label for="name" class="p-contact__label">
+              氏名
+              <span class="p-contact__label-required">必須</span>
+            </label>
+            <input class="p-contact__textbox" type="text" id="name" name="name" placeholder="氏名" value="<?php if( !empty($clean['name']) ){ echo $clean['name']; } ?>" required />
+          </div>
+          <div class="p-contact__form-parts-container">
+            <label for="furigana" class="p-contact__label">
+              フリガナ
+              <span class="p-contact__label-required">必須</span>
+            </label>
+            <input class="p-contact__textbox" type="text" id="furigana" name="furigana" placeholder="フリガナ" value="<?php if( !empty($clean['furigana']) ){ echo $clean['furigana']; } ?>" required />
+          </div>
+          <div class="p-contact__form-parts-container">
+            <label for="email" class="p-contact__label">
+              メールアドレス
+              <span class="p-contact__label-required">必須</span>
+            </label>
+            <input class="p-contact__textbox" type="text" id="email" name="email" placeholder="sample@gmail.com" value="<?php if( !empty($clean['email']) ){ echo $clean['email']; } ?>" required />
+          </div>
+          <div class="p-contact__form-parts-container">
+            <label for="sex" class="p-contact__label p-contact__label--sex">
+              性別
+            </label>
+            <div class="p-contact-radio-button-container">
+              <label class="p-contact__radio-label">
+                <input class="p-contact__radio" type="radio" id="male" name="sex" value="<?php if( !empty($clean['male']) ){ echo $clean['male']; } ?>" /> 男性
               </label>
-              <input class="p-contact__textbox" type="text" id="name" name="name" placeholder="氏名" value="<?php if( !empty($clean['name']) ){ echo $clean['name']; } ?>" required />
-            </div>
-            <div class="p-contact__furigana">
-              <label for="furigana" class="p-contact__label">
-                フリガナ
-                <span class="p-contact__label-required">必須</span>
-              </label>
-              <input class="p-contact__textbox" type="text" id="furigana" name="furigana" placeholder="フリガナ" value="<?php if( !empty($clean['furigana']) ){ echo $clean['furigana']; } ?>" required />
-            </div>
-            <div class="p-contact__email">
-              <label for="email" class="p-contact__label">
-                メールアドレス
-                <span class="p-contact__label-required">必須</span>
-              </label>
-              <input class="p-contact__textbox" type="text" id="email" name="email" placeholder="sample@gmail.com" value="<?php if( !empty($clean['email']) ){ echo $clean['email']; } ?>" required />
-            </div>
-            <div class="p-contact__sex">
-              <label for="sex" class="p-contact__label">
-                性別
-              </label>
-              <div class="p-contact-radio-button-container">
-                <label class="p-contact__radio-label">
-                  <input class="p-contact__radio" type="radio" id="male" name="sex" value="<?php if( !empty($clean['male']) ){ echo $clean['male']; } ?>" /> 男性
-                </label>
-                <label class="p-contact__radio-label">
-                  <input class="p-contact__radio" type="radio" id="female" name="sex" value="<?php if( !empty($clean['female']) ){ echo $clean['female']; } ?>" /> 女性
-                </label>
-              </div>
-            </div>
-            <div class="p-contact__message">
-              <label for="message" class="p-contact__label">
-                メッセージ
-                <span class="p-contact__label-required">必須</span>
-              </label>
-              <textarea id="message" name="message" required><?php if( !empty($clean['message']) ){ echo $clean['message']; } ?></textarea>
-            </div>
-            <div class="p-contact__agree">
-              <label class="c-text" for="agree">
-                <input type="checkbox" id="agree" name="agree" value="agree" <?php if (!empty($clean['agree'])) {echo 'checked';} ?> required /> 個人情報保護方針に同意する
+              <label class="p-contact__radio-label">
+                <input class="p-contact__radio" type="radio" id="female" name="sex" value="<?php if( !empty($clean['female']) ){ echo $clean['female']; } ?>" /> 女性
               </label>
             </div>
-            <div class="p-contact__button c-button--contact">
-              <input type="submit" name="confirmation" value="送信する">
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="p-contact__message">
+            <label for="message" class="p-contact__label">
+              メッセージ
+              <span class="p-contact__label-required">必須</span>
+            </label>
+            <textarea id="message" name="message" required><?php if( !empty($clean['message']) ){ echo $clean['message']; } ?></textarea>
+          </div>
+          <div class="p-contact__agree">
+            <label class="p-contact__agree-text" for="agree">
+              <input type="checkbox" id="agree" name="agree" value="agree" <?php if (!empty($clean['agree'])) {echo 'checked';} ?> required /> 個人情報保護方針に同意する
+            </label>
+          </div>
+          <div class="p-contact__button c-button--contact">
+            <input type="submit" name="confirmation" value="送信する">
+          </div>
+        </form>
       </div>
     </div>
   </main>
@@ -591,25 +597,34 @@ function spaceTrim ($str) {
 
   <!-- フッターここから -->
   <footer class="l-footer">
+    <div class="page-top js-page-top"><a href="#"></a></div>
     <div class="p-footer">
       <div class="p-footer__inner">
-        <div class="p-footer__icon-container">
-          <a href="#">
-            <i class="fab fa-twitter c-sns-icon"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-facebook c-sns-icon"></i>
-          </a>
+        <div class="p-footer__left-column">
+          <div class="p-footer__icon-container">
+            <a href="#">
+              <i class="fab fa-twitter p-footer__sns-icon"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-facebook p-footer__sns-icon"></i>
+            </a>
+          </div>
+          <div class="p-footer__link-container">
+            <a href="#">サイトマップ</a>
+            <a href="#">個人情報保護方針</a>
+            <a href="#">プライバシーポリシー</a>
+          </div>
         </div>
-        <div class="p-footer__link-container">
-          <a href="#">サイトマップ</a>
-          <a href="#">個人情報保護方針</a>
-          <a href="#">プライバシーポリシー</a>
+        <div class="p-footer__right-column">
+          <div class="p-footer__logo-container">
+            <a href="#" class="p-footer__logo">
+              HANIWAMAN Corp.
+            </a>
+            <p class="p-footer__copyright">
+              © Haniwaman Landing page Sample.
+            </p>
+          </div>
         </div>
-        <a href="#" class="p-footer__logo">
-          HANIWAMAN Corp.
-        </a>
-        <p class="p-footer__copyright">© Haniwaman Landing page Sample.</p>
       </div>
     </div>
   </footer>

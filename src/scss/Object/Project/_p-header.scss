@@ -10,6 +10,13 @@
 
   @include mq(pc) {
     height: 80px;
+    background: transparent;
+    transition: all 0.4s;
+
+    &.visible {
+      background: #fff;
+      transition: all 0.4s;
+    }
   }
 
   &__logo {
@@ -37,10 +44,12 @@
     right: -300px;
     z-index: 102;
     width: 300px;
+    background: #fff;
 
     @include mq(pc) {
       position: static;
       width: 100%;
+      background: transparent;
     }
   }
 
@@ -63,11 +72,20 @@
     margin-bottom: 20px;
 
     @include mq(pc) {
-      margin: 0 40px 0 0;
+      padding-bottom: 3px;
+      margin: 0 22px 0 22px;
+      border-bottom: 1px solid transparent;
+      transition: 0.4s;
+
+      &:hover {
+        border-bottom: 1px solid #3e3e3e;
+        transition: 0.4s;
+      }
     }
 
     a {
       font-size: 1.8rem;
+      font-weight: 500;
       color: $color-text;
       text-decoration: none;
       letter-spacing: -0.045em;
@@ -81,7 +99,7 @@
 
   &__hamburger-menu {
     position: absolute;
-    top: 22px;
+    top: 24px;
     right: 16px;
 
     @include mq(pc) {

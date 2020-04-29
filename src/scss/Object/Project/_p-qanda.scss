@@ -13,7 +13,7 @@
 
   &__inner {
     width: 100%;
-    max-width: 1180px;
+    max-width: calc(1147 / 1366 * 100%);
     margin: auto;
   }
 
@@ -28,6 +28,7 @@
 
     @include mq(pc) {
       max-width: 616px;
+      padding: 18px;
       margin: 0 0 40px auto;
     }
   }

@@ -4,6 +4,22 @@
 
 $(function () {
   // ---------------------------------------------
+  // スティッキーヘッダー
+  // ---------------------------------------------
+
+  var $window = $(window),
+    $header = $(".p-header"),
+    threshold = $(".js-sticky-header-threshold").outerHeight();
+
+  $window.on("scroll", function () {
+    if ($window.scrollTop() > threshold) {
+      $header.addClass("visible");
+    } else {
+      $header.removeClass("visible");
+    }
+  });
+
+  // ---------------------------------------------
   // ハンバーガーメニュー
   // ---------------------------------------------
   var $headerNav = $(".js-header-nav"),
@@ -95,35 +111,27 @@ $(function () {
   });
 
   // ---------------------------------------------
-  // スクロールフェードイン
+  // スムーススクロール（トップへ戻る）
   // ---------------------------------------------
 
-  var effectPos = 300, // 画面下からどの位置でフェードさせるか(px)
-    effectMove = 50, // どのぐらい要素を動かすか(px)
-    effectTime = 2000; // エフェクトの時間(ms) 1秒なら1000
-
-  // フェードする前のcssを定義
-  $(".js-scroll-fadein").css({
-    opacity: 0,
-    transform: `translateY(${effectMove}px)`,
-  });
-
-  // スクロールまたはロードするたびに実行
-  $(window).on("scroll load", function () {
-    var scrollBtm = $(this).scrollTop() + $(this).height(),
-      threshold = scrollBtm - effectPos;
-
-    // 要素が可視範囲に入ったとき、エフェクトが発動
-    $(".js-scroll-fadein").each(function () {
-      var thisPos = $(this).offset().top;
-      if (threshold > thisPos) {
-        $(this).css({
-          opacity: 1,
-          transform: "translateY(0)",
-          transition: `opacity ${effectTime}ms, transform ${effectTime}ms`,
-        });
+  var appear = false,
+    pagetop = $(".js-page-top");
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      //100pxスクロールしたら
+      if (appear == false) {
+        appear = true;
+        pagetop.stop().fadeIn();
       }
-    });
+    } else {
+      if (appear) {
+        appear = false;
+        pagetop.stop().fadeOut();
+      }
+    }
+  });
+  pagetop.click(function () {
+    $("body, html").animate({ scrollTop: 0 }, 500);
   });
 
   // ---------------------------------------------
